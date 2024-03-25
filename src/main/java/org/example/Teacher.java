@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class Teacher implements Person {
+public class Teacher extends Person {
     public String fullName;
     ArrayList<Books> books = new ArrayList<>();
     public Teacher(String fullName){
@@ -10,10 +10,9 @@ public class Teacher implements Person {
     }
 
     @Override
-    public ArrayList getBooks() {
+    public ArrayList<Books>  getBooks() {
         return books;
     }
-
     public void addBook(Books book) {
         books.add(book);
     }
